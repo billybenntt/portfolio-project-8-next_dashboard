@@ -1,6 +1,6 @@
 import React from "react";
-import {inter} from "@/app/ui/fonts";
-import '@/app/ui/global.css'
+import {inter} from "@/styles/fonts";
+import '@/styles/global.css'
 import type {Metadata} from 'next'
 
 export const metadata: Metadata = {
@@ -13,9 +13,7 @@ type RootNode = {
     children: React.ReactNode;
 }
 
-export default function RootLayout({children}: RootNode) {
-
-
+function RootLayout({children}: RootNode) {
 
     return (
         <html lang="en">
@@ -23,3 +21,5 @@ export default function RootLayout({children}: RootNode) {
         </html>
     );
 }
+
+export default RootLayout;
