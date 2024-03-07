@@ -1,9 +1,9 @@
 function Page() {
   return (
-    <>
-      <h2>CustomersPage Component</h2>
-    </>
-  )
+    <main>
+      <h1 className="mb-4 text-xl md:text-2xl">Customers Page</h1>
+    </main>
+  );
 }
 
-export default Page
+export default Page;

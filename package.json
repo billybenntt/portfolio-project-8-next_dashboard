@@ -1,12 +1,12 @@
 {
   "private": true,
   "scripts": {
-    "dev": "next dev -p 4000",
     "build": "next build",
-    "prettier": "prettier --write --ignore-unknown .",
+    "db:seed": "node -r dotenv/config scripts/seed.ts",
+    "dev": "next dev -p 4000",
+    "prettier:beautify": "prettier --write --ignore-unknown .",
     "prettier:check": "prettier --check --ignore-unknown .",
-    "start": "next start",
-    "seed": "node -r dotenv/config scripts/seed.ts"
+    "start": "next start"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
