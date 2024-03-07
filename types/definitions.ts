@@ -6,95 +6,122 @@
 import React from 'react';
 
 export interface User {
-  id: string;
-  name: string;
-  email: string;
-  password: string;
+    id: string;
+    name: string;
+    email: string;
+    password: string;
 }
 
 export interface Customer {
-  id: string;
-  name: string;
-  email: string;
-  image_url: string;
+    id: string;
+    name: string;
+    email: string;
+    image_url: string;
 }
 
 export interface Invoice {
-  id: string;
-  customer_id: string;
-  amount: number;
-  date: string;
-  // In TypeScript, this is called a string union interface .
-  // It means that the "status" property can only be one of the two strings: 'pending' or 'paid'.
-  status: 'pending' | 'paid';
+    id: string;
+    customer_id: string;
+    amount: number;
+    date: string;
+    // In TypeScript, this is called a string union interface .
+    // It means that the "status" property can only be one of the two strings: 'pending' or 'paid'.
+    status: 'pending' | 'paid';
 }
 
 export interface Revenue {
-  month: string;
-  revenue: number;
+    month: string;
+    revenue: number;
 }
 
 export interface LatestInvoice {
-  id: string;
-  name: string;
-  image_url: string;
-  email: string;
-  amount: string;
+    id: string;
+    name: string;
+    image_url: string;
+    email: string;
+    amount: string;
 }
 
 // The database returns a number for amount, but we later format it to a string with the formatCurrency function
 export type LatestInvoiceRaw = Omit<LatestInvoice, 'amount'> & {
-  amount: number;
+    amount: number;
 };
 
 export interface InvoicesTable {
-  id: string;
-  customer_id: string;
-  name: string;
-  email: string;
-  image_url: string;
-  date: string;
-  amount: number;
-  status: 'pending' | 'paid';
+    id: string;
+    customer_id: string;
+    name: string;
+    email: string;
+    image_url: string;
+    date: string;
+    amount: number;
+    status: 'pending' | 'paid';
 }
 
 export interface CustomersTableType {
-  id: string;
-  name: string;
-  email: string;
-  image_url: string;
-  total_invoices: number;
-  total_pending: number;
-  total_paid: number;
+    id: string;
+    name: string;
+    email: string;
+    image_url: string;
+    total_invoices: number;
+    total_pending: number;
+    total_paid: number;
 }
 
+
 export interface FormattedCustomersTable {
-  id: string;
-  name: string;
-  email: string;
-  image_url: string;
-  total_invoices: number;
-  total_pending: string;
-  total_paid: string;
+    id: string;
+    name: string;
+    email: string;
+    image_url: string;
+    total_invoices: number;
+    total_pending: string;
+    total_paid: string;
 }
 
 export interface CustomerField {
-  id: string;
-  name: string;
+    id: string;
+    name: string;
 }
 
 export interface InvoiceForm {
-  id: string;
-  customer_id: string;
-  amount: number;
-  status: 'pending' | 'paid';
+    id: string;
+    customer_id: string;
+    amount: number;
+    status: 'pending' | 'paid';
 }
 
 export interface ReactProps {
-  children: React.ReactNode;
+    children: React.ReactNode;
 }
 
 export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  children: React.ReactNode;
+    extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+    children: React.ReactNode;
+}
+
+
+export interface CustomerTablesProps {
+    customers: FormattedCustomersTable[];
+
+}
+
+
+
+export interface LatestInvoicesProps {
+  latestInvoices: LatestInvoice[];
+}
+
+
+export interface RevenueChartProps {
+  revenue: Revenue[]
+}
+
+
+
+export interface CardProps {
+    title: string;
+    value: number | string;
+    type: 'invoices' | 'customers' | 'pending' | 'collected'
+
 }

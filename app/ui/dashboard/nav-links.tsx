@@ -20,7 +20,7 @@ const links = [
     {name: 'Customers', href: '/dashboard/customers', icon: UserGroupIcon},
 ];
 
-export default function NavLinks() {
+function NavLinks() {
     const pathName = usePathname();
 
     return (
@@ -39,7 +39,7 @@ export default function NavLinks() {
                             },
                         )}
                     >
-                        <LinkIcon className="w-6"/>
+                        <LinkIcon className="w-6 "/>
                         <p className="hidden md:block">{link.name}</p>
                     </Link>
                 );
@@ -47,3 +47,5 @@ export default function NavLinks() {
         </>
     );
 }
+
+export default NavLinks

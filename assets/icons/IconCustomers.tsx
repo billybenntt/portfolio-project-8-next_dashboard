@@ -1,6 +1,6 @@
 import * as React from "react"
 
-function IconInvoices(props: React.SVGProps<SVGSVGElement>) {
+function IconCustomers(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -14,11 +14,11 @@ function IconInvoices(props: React.SVGProps<SVGSVGElement>) {
       strokeLinejoin="round"
       {...props}
     >
-      <path d="M20 7h-3a2 2 0 01-2-2V2" />
-      <path d="M9 18a2 2 0 01-2-2V4a2 2 0 012-2h7l4 4v10a2 2 0 01-2 2z" />
-      <path d="M3 7.6v12.8A1.6 1.6 0 004.6 22h9.8" />
+      <path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2" />
+      <circle cx={9} cy={7} r={4} />
+      <path d="M22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
     </svg>
   )
 }
 
-export default IconInvoices
+export default IconCustomers

@@ -1,6 +1,6 @@
 import * as React from "react"
 
-function IconInvoices(props: React.SVGProps<SVGSVGElement>) {
+function IconPending(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -12,13 +12,13 @@ function IconInvoices(props: React.SVGProps<SVGSVGElement>) {
       strokeWidth={2}
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="lucide lucide-clock-3"
       {...props}
     >
-      <path d="M20 7h-3a2 2 0 01-2-2V2" />
-      <path d="M9 18a2 2 0 01-2-2V4a2 2 0 012-2h7l4 4v10a2 2 0 01-2 2z" />
-      <path d="M3 7.6v12.8A1.6 1.6 0 004.6 22h9.8" />
+      <circle cx={12} cy={12} r={10} />
+      <path d="M12 6L12 12 16.5 12" />
     </svg>
   )
 }
 
-export default IconInvoices
+export default IconPending
