@@ -1,3 +1,3 @@
-import IconDashboard from "./IconDashboard";
+import IconDashboard from './IconDashboard';
 
-export {IconDashboard};
+export { IconDashboard };
