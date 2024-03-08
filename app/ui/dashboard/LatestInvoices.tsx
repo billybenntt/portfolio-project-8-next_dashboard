@@ -8,7 +8,7 @@ async function LatestInvoices(props: LatestInvoicesProps) {
     const {latestInvoices} = props
 
     return (
-        <div className="flex w-full flex-col md:col-span-4">
+        <article className="flex w-full flex-col md:col-span-4">
             <h2 className={`mb-4 text-xl md:text-2xl`}>
                 Latest Invoices
             </h2>
@@ -58,7 +58,7 @@ async function LatestInvoices(props: LatestInvoicesProps) {
                     <h3 className="ml-2">Updated just now</h3>
                 </div>
             </div>
-        </div>
+        </article>
     );
 }
 

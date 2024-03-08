@@ -1,6 +1,6 @@
 import { IconDashboard } from '@/assets/icons';
 
-function AcmeLogo() {
+function LogoMain() {
   return (
     <div
       className={`flex flex-row items-center leading-none text-white duration-200 hover:text-zinc-400`}
@@ -11,4 +11,4 @@ function AcmeLogo() {
   );
 }
 
-export default AcmeLogo;
+export default LogoMain;

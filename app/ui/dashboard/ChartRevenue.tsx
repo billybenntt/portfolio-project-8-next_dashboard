@@ -3,7 +3,7 @@ import {IconCalendar} from '@/assets/icons';
 import {RevenueChartProps} from '@/types/definitions';
 
 
-async function RevenueChart(props: RevenueChartProps) {
+async function ChartRevenue(props: RevenueChartProps) {
 
     const {revenue} = props
     const chartHeight = 350;
@@ -15,7 +15,7 @@ async function RevenueChart(props: RevenueChartProps) {
     }
 
     return (
-        <div className="w-full md:col-span-4">
+        <article className="w-full md:col-span-4">
             <h2 className={`mb-4 text-xl md:text-2xl`}>
                 Recent Revenue
             </h2>
@@ -50,11 +50,11 @@ async function RevenueChart(props: RevenueChartProps) {
                     <h3 className="ml-2">Last 12 months</h3>
                 </div>
             </div>
-        </div>
+        </article>
     );
 }
 
-export default RevenueChart;
+export default ChartRevenue;
 
 // This component is representational only.
 // For data visualization UI, check out:
