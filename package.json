@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "db:seed": "node -r dotenv/config scripts/seed.ts",
+    "db:seed": "node -r dotenv/config scripts/dataSeedDB.ts",
     "dev": "next dev -p 4000",
     "prettier:beautify": "prettier --write --ignore-unknown .",
     "prettier:check": "prettier --check --ignore-unknown .",

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import NavLinks from '@/app/ui/dashboard/nav-links';
+import NavLinks from '@/app/ui/dashboard/NavLinks';
 import {IconDashboard, IconLogOut} from '@/assets/icons';
 
 export default function SideNav() {

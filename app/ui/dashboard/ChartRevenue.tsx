@@ -1,4 +1,4 @@
-import {generateYAxis} from '@/utils/utils';
+import {generateYAxis} from '@/utils/dataFormat';
 import {IconCalendar} from '@/assets/icons';
 import {RevenueChartProps} from '@/types/definitions';
 

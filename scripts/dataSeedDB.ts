@@ -1,5 +1,5 @@
 import { db } from '@vercel/postgres';
-import { invoices, customers, revenue, users } from '@/utils/placeholder-data';
+import { invoices, customers, revenue, users } from '@/utils/dataPlaceholder';
 import { hash } from 'bcrypt';
 
 async function seedUsers(client: any) {

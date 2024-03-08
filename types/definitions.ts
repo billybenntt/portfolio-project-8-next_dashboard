@@ -1,6 +1,5 @@
 // This file contains type definitions for your data.
 // It describes the shape of the data, and what data type each property should accept.
-// For simplicity of teaching, we're manually defining these types.
 // However, these types are generated automatically if you're using an ORM such as Prisma.
 
 import React from 'react';
@@ -91,6 +90,13 @@ export interface InvoiceForm {
     status: 'pending' | 'paid';
 }
 
+export interface Breadcrumb {
+    label: string;
+    href: string;
+    active?: boolean;
+}
+
+
 export interface ReactProps {
     children: React.ReactNode;
 }
@@ -103,25 +109,26 @@ export interface ButtonProps
 
 export interface CustomerTablesProps {
     customers: FormattedCustomersTable[];
-
 }
 
 
-
 export interface LatestInvoicesProps {
-  latestInvoices: LatestInvoice[];
+    latestInvoices: LatestInvoice[];
 }
 
 
 export interface RevenueChartProps {
-  revenue: Revenue[]
+    revenue: Revenue[]
 }
 
+
+export interface BreadcrumbProps {
+    breadcrumbs: Breadcrumb[]
+}
 
 
 export interface CardProps {
     title: string;
     value: number | string;
     type: 'invoices' | 'customers' | 'pending' | 'collected'
-
 }
