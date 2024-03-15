@@ -10,7 +10,7 @@ import {
     LatestInvoiceRaw,
     Revenue,
     User,
-} from '@/types/definitions';
+} from '@/types/app.definitions';
 
 const ITEMS_PER_PAGE = 6;
 
@@ -20,15 +20,15 @@ export async function fetchRevenue() {
     // This is equivalent to in fetch(..., {cache: 'no-store'}).
 
     try {
-        // Artificially delay a response for demo purposes.
-        // Don't do this in production :)
+        // Artificially delay a response for demo purposes and show suspense.
+        // Not to be done in production.
 
         console.log('Fetching revenue data...');
-        await new Promise((resolve) => setTimeout(resolve, 1000));
+        await new Promise((resolve) => setTimeout(resolve, 2000));
 
         const data = await sql<Revenue>`SELECT * FROM revenue`;
 
-        console.log('Data fetch completed after 1 seconds.');
+        console.log('Data fetch completed after 2 seconds.');
 
         return data.rows;
     } catch (error) {

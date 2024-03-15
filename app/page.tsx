@@ -21,12 +21,13 @@ function Page() {
                 <article className="flex flex-col justify-center gap-6 rounded-lg bg-gray-50 px-6 py-10 md:w-2/5 md:px-20">
                     <div className={shape.triangle}/>
                     <p className="tex-xl text-gray-800 md:text-xl md:leading-normal">
-                        <strong>Welcome to NextJS Dashboard.</strong> This is the customized
-                        example for the{' '}
-                        <a href="https://nextjs.org/learn/" className="text-zinc-500">
-                            Next.js Learn Course
-                        </a>
+                        <strong>Welcome to NextJSInvoiceDashboard </strong>
+                        {' '} Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     </p>
+                    <a href="https://nextjs.org/learn/" className="text-zinc-500">
+                        Login to access the dashboard
+                    </a>
+
                     <Link
                         href={`/dashboard`}
                         className="flex items-center gap-5 self-start rounded-lg bg-black px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-zinc-600 md:text-base"

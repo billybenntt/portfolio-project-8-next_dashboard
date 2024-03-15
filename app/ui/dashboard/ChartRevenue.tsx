@@ -1,6 +1,6 @@
 import {generateYAxis} from '@/utils/dataFormat';
 import {IconCalendar} from '@/assets/icons';
-import {Revenue} from '@/types/definitions';
+import {Revenue} from '@/types/app.definitions';
 
 
 interface IProps {

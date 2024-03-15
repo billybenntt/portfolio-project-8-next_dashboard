@@ -1,6 +1,6 @@
 'use client';
 
-import {CustomerField, InvoiceForm} from '@/types/definitions';
+import {CustomerField, InvoiceForm} from '@/types/app.definitions';
 import Link from 'next/link';
 import Button from '@/app/ui/components/Button';
 import {CheckIcon, ClockIcon, CurrencyDollarIcon, UserCircleIcon} from '@heroicons/react/24/outline';

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Search from '@/app/ui/components/search';
-import {CustomersTableType} from '@/types/definitions';
+import {CustomersTableType} from '@/types/app.definitions';
 
 
 interface IProps {

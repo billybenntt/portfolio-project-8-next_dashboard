@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import Image from 'next/image';
-import {LatestInvoice} from '@/types/definitions';
+import {LatestInvoice} from '@/types/app.definitions';
 import {IconRefresh} from '@/assets/icons';
 
 

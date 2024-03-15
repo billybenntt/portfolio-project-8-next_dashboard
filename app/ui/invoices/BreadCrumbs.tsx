@@ -1,6 +1,6 @@
 import {clsx} from 'clsx';
 import Link from 'next/link';
-import {Breadcrumb} from "@/types/definitions";
+import {Breadcrumb} from "@/types/app.definitions";
 
 
 interface IProps<T> {

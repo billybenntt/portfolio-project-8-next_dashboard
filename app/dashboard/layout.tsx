@@ -1,5 +1,5 @@
 import SideNav from '@/app/ui/dashboard/SideNav';
-import {ReactProps} from '@/types/definitions';
+import {ReactProps} from '@/types/app.definitions';
 import {jetBrainsMono} from '@/styles/fonts';
 
 

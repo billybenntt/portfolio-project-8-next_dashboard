@@ -1,4 +1,4 @@
-import {CustomerField} from '@/types/definitions';
+import {CustomerField} from '@/types/app.definitions';
 import Link from 'next/link';
 import {CheckIcon, ClockIcon, CurrencyDollarIcon, UserCircleIcon} from '@heroicons/react/24/outline';
 import Button from '@/app/ui/components/Button';

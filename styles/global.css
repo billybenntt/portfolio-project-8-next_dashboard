@@ -22,7 +22,7 @@
 }
 
 
-.shimmer {
+.glowing {
     @apply before:absolute
     before:inset-0
     before:-translate-x-full

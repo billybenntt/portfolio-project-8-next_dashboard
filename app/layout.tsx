@@ -2,10 +2,10 @@ import React from 'react';
 import '@/styles/global.css';
 import type {Metadata} from 'next';
 import {jetBrainsMono} from '@/styles/fonts';
-import {ReactProps} from '@/types/definitions';
+import {ReactProps} from '@/types/app.definitions';
 
 export const metadata: Metadata = {
-    title: 'Project 8: Next Dashboard',
+    title: 'Project 8: Next Invoice',
     description: 'A CRUD app build with NextJS',
 };
 
