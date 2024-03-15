@@ -1,5 +1,12 @@
-import {CardProps} from "@/types/definitions";
 import {IconCollected, IconPending, IconTotal, IconCustomers} from '@/assets/icons';
+
+
+export interface CardProps {
+    title: string;
+    value: number | string;
+    type: 'invoices' | 'customers' | 'pending' | 'collected'
+}
+
 
 const iconMap = {
     collected: IconCollected,
@@ -33,7 +40,6 @@ export function Card(props: CardProps) {
 export default async function CardWrapper() {
     return (
         <>
-            {/* NOTE: comment in this code when you get to this point in the course */}
 
             {/* <Card title="Collected" value={totalPaidInvoices} type="collected" />
       <Card title="Pending" value={totalPendingInvoices} type="pending" />

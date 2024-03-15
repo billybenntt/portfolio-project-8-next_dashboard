@@ -1,5 +1,5 @@
 import shape from '@/styles/home.module.css';
-import LogoMain from '@/app/ui/LogoMain';
+import LogoMain from '@/app/ui/components/LogoMain';
 import Link from 'next/link';
 import Image from 'next/image';
 import {IconLogIn} from '@/assets/icons'

@@ -1,9 +1,14 @@
 import {clsx} from 'clsx';
 import Link from 'next/link';
-import {BreadcrumbProps} from "@/types/definitions";
+import {Breadcrumb} from "@/types/definitions";
 
 
-function Breadcrumbs(props: BreadcrumbProps) {
+interface IProps<T> {
+    breadcrumbs: T[]
+}
+
+
+function BreadCrumbs(props: IProps<Breadcrumb>) {
 
     const {breadcrumbs} = props
 
@@ -29,4 +34,4 @@ function Breadcrumbs(props: BreadcrumbProps) {
     );
 }
 
-export default Breadcrumbs
+export default BreadCrumbs

@@ -1,9 +1,11 @@
-import SideNav from '@/app/ui/dashboard/sidenav';
+import SideNav from '@/app/ui/dashboard/SideNav';
 import {ReactProps} from '@/types/definitions';
 import {jetBrainsMono} from '@/styles/fonts';
 
-function Layout({children}: ReactProps) {
 
+
+
+function Layout({children}: ReactProps) {
     return (
         <main className={`flex h-screen flex-col md:flex-row md:overflow-hidden ${jetBrainsMono.className}`}>
             {/*SHARED LAYOUT*/}

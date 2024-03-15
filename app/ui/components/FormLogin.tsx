@@ -1,11 +1,9 @@
-import {
-    AtSymbolIcon,
-    KeyIcon,
-} from '@heroicons/react/24/outline';
+import {AtSymbolIcon, KeyIcon,} from '@heroicons/react/24/outline';
 import {ArrowRightIcon} from '@heroicons/react/20/solid';
-import Button from './button';
+import Button from './Button';
 
-function LoginForm() {
+
+function FormLogin() {
     return (
         <form className="space-y-3">
             <div className="flex-1 rounded-lg bg-gray-50 px-6 pb-4 pt-8">
@@ -71,4 +69,4 @@ function LoginButton() {
 }
 
 
-export default LoginForm
+export default FormLogin

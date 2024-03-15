@@ -1,11 +1,16 @@
 import Image from 'next/image';
-import Search from '@/app/ui/search';
-import {CustomerTablesProps} from '@/types/definitions';
+import Search from '@/app/ui/components/search';
+import {CustomersTableType} from '@/types/definitions';
 
-async function CustomersTable(props: CustomerTablesProps) {
+
+interface IProps {
+    customers: CustomersTableType[];
+}
+
+
+async function TableCustomers(props: IProps) {
 
     const {customers} = props
-
 
     return (
         <div className="w-full">
@@ -19,10 +24,8 @@ async function CustomersTable(props: CustomerTablesProps) {
                         <div className="overflow-hidden rounded-md bg-gray-50 p-2 md:pt-0">
                             <div className="md:hidden">
                                 {customers?.map((customer) => (
-                                    <div
-                                        key={customer.id}
-                                        className="mb-2 w-full rounded-md bg-white p-4"
-                                    >
+                                    <div key={customer.id}
+                                        className="mb-2 w-full rounded-md bg-white p-4">
                                         <div className="flex items-center justify-between border-b pb-4">
                                             <div>
                                                 <div className="mb-2 flex items-center">
@@ -118,4 +121,4 @@ async function CustomersTable(props: CustomerTablesProps) {
     );
 }
 
-export default CustomersTable;
+export default TableCustomers;

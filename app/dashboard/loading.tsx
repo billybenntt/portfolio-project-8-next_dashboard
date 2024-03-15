@@ -1,4 +1,4 @@
-import DashboardSkeleton from '@/app/ui/skeletons';
+import DashboardSkeleton from '@/app/ui/skeleton/skeletons';
 
 function Loading() {
   return (

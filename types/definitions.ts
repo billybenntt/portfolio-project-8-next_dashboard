@@ -23,8 +23,6 @@ export interface Invoice {
     customer_id: string;
     amount: number;
     date: string;
-    // In TypeScript, this is called a string union interface .
-    // It means that the "status" property can only be one of the two strings: 'pending' or 'paid'.
     status: 'pending' | 'paid';
 }
 
@@ -68,16 +66,6 @@ export interface CustomersTableType {
 }
 
 
-export interface FormattedCustomersTable {
-    id: string;
-    name: string;
-    email: string;
-    image_url: string;
-    total_invoices: number;
-    total_pending: string;
-    total_paid: string;
-}
-
 export interface CustomerField {
     id: string;
     name: string;
@@ -101,34 +89,10 @@ export interface ReactProps {
     children: React.ReactNode;
 }
 
-export interface ButtonProps
-    extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-    children: React.ReactNode;
-}
 
 
-export interface CustomerTablesProps {
-    customers: FormattedCustomersTable[];
-}
 
 
-export interface LatestInvoicesProps {
-    latestInvoices: LatestInvoice[];
-}
 
 
-export interface RevenueChartProps {
-    revenue: Revenue[]
-}
 
-
-export interface BreadcrumbProps {
-    breadcrumbs: Breadcrumb[]
-}
-
-
-export interface CardProps {
-    title: string;
-    value: number | string;
-    type: 'invoices' | 'customers' | 'pending' | 'collected'
-}

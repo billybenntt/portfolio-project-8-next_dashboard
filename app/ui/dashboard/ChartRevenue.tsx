@@ -1,9 +1,14 @@
 import {generateYAxis} from '@/utils/dataFormat';
 import {IconCalendar} from '@/assets/icons';
-import {RevenueChartProps} from '@/types/definitions';
+import {Revenue} from '@/types/definitions';
 
 
-async function ChartRevenue(props: RevenueChartProps) {
+interface IProps {
+    revenue: Revenue[];
+}
+
+
+async function ChartRevenue(props: IProps) {
 
     const {revenue} = props
     const chartHeight = 350;

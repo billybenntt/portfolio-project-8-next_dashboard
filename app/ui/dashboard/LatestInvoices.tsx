@@ -1,9 +1,14 @@
 import clsx from 'clsx';
 import Image from 'next/image';
-import {LatestInvoicesProps} from '@/types/definitions';
+import {LatestInvoice} from '@/types/definitions';
 import {IconRefresh} from '@/assets/icons';
 
-async function LatestInvoices(props: LatestInvoicesProps) {
+
+interface IProps<T> {
+    latestInvoices: T[]
+}
+
+async function LatestInvoices(props: IProps<LatestInvoice>) {
 
     const {latestInvoices} = props
 
@@ -14,7 +19,6 @@ async function LatestInvoices(props: LatestInvoicesProps) {
             </h2>
 
             <div className="flex grow flex-col justify-between rounded-xl bg-gray-50 p-4">
-                {/* NOTE: comment in this code when you get to this point in the course */}
 
                 <div className="bg-white px-6">
                     {latestInvoices.map((invoice, i) => {

@@ -37,7 +37,7 @@ export async function fetchRevenue() {
     }
 }
 
-// FETCH LATEST INVOICES
+// FETCH LATEST 6 INVOICES, SORT BY DATE
 export async function fetchLatestInvoices() {
     noStore();
 
@@ -47,7 +47,7 @@ export async function fetchLatestInvoices() {
       FROM invoices
       JOIN customers ON invoices.customer_id = customers.id
       ORDER BY invoices.date DESC
-      LIMIT 5`;
+      LIMIT 6`;
 
         return data.rows.map((invoice) => ({
             ...invoice,
@@ -64,8 +64,8 @@ export async function fetchCardData() {
     noStore();
 
     try {
-        // You can probably combine these into a single SQL query
-        // However, we are intentionally splitting them to demonstrate
+        // I can probably combine these into a single SQL query
+        // However, intentionally splitting them to demonstrate
         // how to initialize multiple queries in parallel with JS.
         const invoiceCountPromise = sql`SELECT COUNT(*) FROM invoices`;
         const customerCountPromise = sql`SELECT COUNT(*) FROM customers`;
