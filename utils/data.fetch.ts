@@ -1,6 +1,6 @@
 import {sql} from '@vercel/postgres';
 import {unstable_noStore as noStore} from 'next/cache';
-import {formatCurrency} from './dataFormat';
+import {formatCurrency} from './data.format';
 
 import {
     CustomerField,

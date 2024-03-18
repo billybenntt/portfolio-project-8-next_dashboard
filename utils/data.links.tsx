@@ -1,9 +1,9 @@
 import {IconHome, IconInvoices, IconCustomers} from '@/assets/icons'
 
-// Map of links to display in the side navigation.
+// Map of dataLinks to display in the side navigation.
 // Depending on the size of the application, this would be stored in a database.
 
-const links = [
+const dataLinks = [
     {
         name: 'Home',
         href: '/dashboard',
@@ -21,4 +21,4 @@ const links = [
     },
 ];
 
-export default links
+export default dataLinks

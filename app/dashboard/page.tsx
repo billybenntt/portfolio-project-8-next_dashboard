@@ -1,7 +1,7 @@
 import {Card} from '@/app/ui/dashboard/Card';
 import ChartRevenue from '@/app/ui/dashboard/ChartRevenue';
 import LatestInvoices from '@/app/ui/dashboard/LatestInvoices';
-import {fetchCardData, fetchLatestInvoices, fetchRevenue} from '@/utils/dataFetch';
+import {fetchCardData, fetchLatestInvoices, fetchRevenue} from '@/utils/data.fetch';
 
 // DASHBOARD MAIN PAGE
 

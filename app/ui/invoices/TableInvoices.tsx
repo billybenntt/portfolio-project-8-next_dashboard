@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import {UpdateInvoice, DeleteInvoice} from '@/app/ui/invoices/buttons';
 import InvoiceStatus from '@/app/ui/invoices/InvoiceStatus';
-import {formatDateToLocal, formatCurrency} from '@/utils/dataFormat';
-import {fetchFilteredInvoices} from '@/utils/dataFetch';
+import {formatDateToLocal, formatCurrency} from '@/utils/data.format';
+import {fetchFilteredInvoices} from '@/utils/data.fetch';
 
 
 interface IProps {

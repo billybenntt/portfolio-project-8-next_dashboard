@@ -1,7 +1,7 @@
 'use client';
 import clsx from 'clsx';
 import Link from 'next/link';
-import links from '@/utils/links';
+import dataLinks from '@/utils/data.links';
 import {usePathname} from 'next/navigation';
 
 
@@ -10,7 +10,7 @@ function NavLinks() {
 
     return (
         <>
-            {links.map((link) => {
+            {dataLinks.map((link) => {
                 const LinkIcon = link.icon;
                 const classIsActive = clsx(
                     'flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium' +
