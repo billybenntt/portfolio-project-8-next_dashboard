@@ -1,7 +1,7 @@
 'use client';
 import {useSearchParams, usePathname, useRouter} from "next/navigation";
 import {IconGlass} from '@/assets/icons';
-
+import {useDebouncedCallback} from "use-debounce";
 
 function Search(props: { placeholder: string }) {
 
@@ -14,17 +14,20 @@ function Search(props: { placeholder: string }) {
     const {replace} = useRouter()
 
 
-    const handleSearch = (term: string) => {
-        const params = new URLSearchParams(searchParams);
-        if (term) {
-            params.set('query', term);
-        } else {
-            params.delete('query');
+    const handleSearch = useDebouncedCallback((term: string) => {
+            const params = new URLSearchParams(searchParams);
+
+            if (term) {
+                params.set('query', term);
+            } else {
+                params.delete('query');
+            }
+
+
+            replace(`${pathname}?${params.toString()}`);
         }
 
-
-        replace(`${pathname}?${params.toString()}`);
-    }
+        , 300)
 
 
     return (

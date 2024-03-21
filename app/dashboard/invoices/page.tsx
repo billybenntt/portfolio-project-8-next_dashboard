@@ -1,6 +1,6 @@
 import {InvoicesTableSkeleton} from '@/app/ui/skeleton/skeletons';
 import {Suspense} from 'react';
-import Search from '@/app/ui/components/search';
+import Search from '@/app/ui/components/Search';
 import Table from '@/app/ui/invoices/TableInvoices';
 import {CreateInvoice} from '@/app/ui/invoices/buttons';
 

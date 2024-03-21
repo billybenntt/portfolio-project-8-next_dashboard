@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Search from '@/app/ui/components/search';
+import Search from '@/app/ui/components/Search';
 import {CustomersTableType} from '@/types/app.definitions';
 
 
