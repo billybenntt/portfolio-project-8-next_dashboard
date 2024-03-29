@@ -1,16 +1,14 @@
 import clsx from 'clsx';
 import Image from 'next/image';
-import {LatestInvoice} from '@/types/app.definitions';
 import {IconRefresh} from '@/assets/icons';
+import {fetchLatestInvoices} from "@/utils/data.fetch";
 
 
-interface IProps<T> {
-    latestInvoices: T[]
-}
+async function LatestInvoices() {
 
-async function LatestInvoices(props: IProps<LatestInvoice>) {
 
-    const {latestInvoices} = props
+
+    const latestInvoices= await fetchLatestInvoices();
 
     return (
         <article className="flex w-full flex-col md:col-span-4">

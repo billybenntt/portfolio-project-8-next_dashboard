@@ -1,16 +1,13 @@
 import {generateYAxis} from '@/utils/data.format';
 import {IconCalendar} from '@/assets/icons';
 import {Revenue} from '@/types/app.definitions';
+import {fetchRevenue} from "@/utils/data.fetch";
 
 
-interface IProps {
-    revenue: Revenue[];
-}
 
+async function ChartRevenue() {
 
-async function ChartRevenue(props: IProps) {
-
-    const {revenue} = props
+    const revenue = await fetchRevenue()
     const chartHeight = 350;
     const {yAxisLabels, topLabel} = generateYAxis(revenue);
 

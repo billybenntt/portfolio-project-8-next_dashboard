@@ -1,5 +1,5 @@
 import {IconCollected, IconPending, IconTotal, IconCustomers} from '@/assets/icons';
-
+import {fetchCardData} from "@/utils/data.fetch";
 
 export interface CardProps {
     title: string;
@@ -16,7 +16,8 @@ const iconMap = {
 };
 
 
-export function Card(props: CardProps) {
+export function Cards(props: CardProps) {
+
 
     const {type, title, value} = props
     const Icon = iconMap[type];
@@ -37,18 +38,23 @@ export function Card(props: CardProps) {
 }
 
 
-export default async function CardWrapper() {
+export async function CardWrapper() {
+
+    const {
+        numberOfInvoices, numberOfCustomers, totalPaidInvoices, totalPendingInvoices,
+    } = await fetchCardData();
+
     return (
         <>
 
-            {/* <Card title="Collected" value={totalPaidInvoices} type="collected" />
-      <Card title="Pending" value={totalPendingInvoices} type="pending" />
-      <Card title="Total Invoices" value={numberOfInvoices} type="invoices" />
-      <Card
-        title="Total Customers"
-        value={numberOfCustomers}
-        type="customers"
-      /> */}
+            <Cards title="Collected" value={totalPaidInvoices} type="collected"/>
+            <Cards title="Pending" value={totalPendingInvoices} type="pending"/>
+            <Cards title="Total Invoices" value={numberOfInvoices} type="invoices"/>
+            <Cards
+                title="Total Customers"
+                value={numberOfCustomers}
+                type="customers"
+            />
         </>
     );
 }
