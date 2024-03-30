@@ -9,9 +9,11 @@ import IconCustomers from './IconCustomers';
 import IconRefresh from './IconRefresh';
 import IconCalendar from './IconCalendar';
 import IconLogOut from './IconLogOut';
+import IconGlass from './IconGlass';
 
 export {
     IconDashboard,
+    IconGlass,
     IconCalendar,
     IconLogOut,
     IconRefresh,
