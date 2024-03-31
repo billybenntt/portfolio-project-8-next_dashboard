@@ -27,7 +27,7 @@ function Search(props: { placeholder: string }) {
             replace(`${pathname}?${params.toString()}`);
         }
 
-        , 300)
+        , 400)
 
 
     return (
