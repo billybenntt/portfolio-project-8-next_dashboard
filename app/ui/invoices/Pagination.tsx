@@ -8,13 +8,10 @@ import {generatePagination} from '@/utils/data.format';
 
 
 export default function Pagination({totalPages}: { totalPages: number }) {
-    // NOTE: comment in this code when you get to this point in the course
 
     const pathname = usePathname()
     const searchParams = useSearchParams()
-    const currentPage = Number(searchParams.get('currentPage')) || 1;
-    console.log(pathname)
-    console.log(currentPage)
+    const currentPage = Number(searchParams.get('page')) || 1;
 
 
     const createPageURL = (pageNumber: number | string) => {
@@ -27,7 +24,6 @@ export default function Pagination({totalPages}: { totalPages: number }) {
 
     return (
         <>
-            {/* NOTE: comment in this code when you get to this point in the course */}
 
             <div className="inline-flex">
                 <PaginationArrow
